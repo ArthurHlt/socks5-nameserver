@@ -26,7 +26,7 @@ function build {
 
   cd ${CWD}
   echo "building ${BINARYNAME} (${os} ${arch})..."
-  GOARCH=${arch} GOOS=${os} go build -ldflags="-s -w -X main.Version=${version}" -o $OUTDIR/${BINARYNAME}_${os}_${arch}${ext} github.com/orange-cloudfoundry/cloud-sidecars/cli/ || {
+  GOARCH=${arch} GOOS=${os} go build -ldflags="-s -w -X main.Version=${version}" -o $OUTDIR/${BINARYNAME}_${os}_${arch}${ext} || {
     echo >&2 "error: while building ${BINARYNAME} (${os} ${arch})"
     return 1
   }
