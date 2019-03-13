@@ -5,7 +5,7 @@ set -e
 
 BASE=$(dirname $0)
 OUTDIR=${BASE}/../out
-BINARYNAME=cloud-sidecars
+BINARYNAME=socks5-nameserver
 CWD=$(pwd)
 version=$(echo "${TRAVIS_BRANCH:-dev}" | sed 's/^v//')
 
